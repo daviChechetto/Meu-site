@@ -1,0 +1,118 @@
+:root{
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    --cor-texto-botao: 
+}
+.contraste, .contraste * {
+    color: var(--cor-secundaria) !important;
+    background: var(--cor-primaria) !important;
+    border-color: var(--cor-secundaria) !important;
+    text-decoration: none !important;
+
+    img{
+        background: transparent !important;
+    }
+}
+
+.contraste .aba-acessibilidade{
+    background: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+    i{
+        background-color: var(--cor-secundaria) !important;
+        color: var(--cor-primaria) !important;
+    }
+}
+
+.contraste #acessibilidade{
+    border: 2px solid var(--cor-secundaria) !important;
+}
+
+.contraste #acessibilidade li:hover {
+    background: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+    
+    a, h6, span, div, i, sup{
+        background: transparent !important;
+        color: var(--cor-primaria) !important;
+    }
+}
+
+/* Ajuste para faixa de "novo" */
+.contraste #servicosContainer .card .faixa-novo{
+    background-color: var(--cor-secundaria) !important;
+    p{
+        background-color: var(--cor-secundaria) !important;
+        color: var(--cor-primaria) !important;
+    }
+}
+
+
+/* Ajuste para inputs e botões */
+.contraste input, .contraste textarea, .contraste button, .contraste select, .contraste .indicador {
+    border: 2px solid var(--cor-secundaria) !important;
+}
+
+
+.contraste button:not(.card) {
+    background: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+    padding: 10px;
+    cursor: pointer;
+
+    i{
+        background-color: var(--cor-secundaria) !important;
+        color: var(--cor-primaria) !important;
+    }
+    
+}
+
+.contraste button.card{
+    .selos{
+        background-color: transparent !important;
+    }
+}
+
+/* Links */
+.contraste a {
+    text-decoration: underline !important;
+    &:hover, &:active{
+        color: #FFF333 !important
+    }
+}
+
+/* Ajuste para tabelas */
+.contraste table {
+    border-collapse: collapse !important;
+    border: 2px solid var(--cor-secundaria) !important;
+    width: 100%;
+}
+
+.contraste th, .contraste td {
+    border: 1px solid var(--cor-secundaria) !important;
+    padding: 8px;
+    text-align: left;
+}
+
+
+
+/* Serviços */
+
+.contraste #servicos {
+    .filtros-cards-container {
+        box-shadow: none !important;
+
+        .lista-filtros {
+            .elemento-grafico-filtro-hover{
+                display: none !important;
+            }
+            .elemento-grafico-filtro-selecionado {
+                display: none !important;
+            }
+            .filtro-de-cor {
+                display: none !important;
+            }
+        }
+    }
+}
+
+/* FIM Serviços END */

@@ -1,0 +1,229 @@
+:root {
+    --delay-default: 250ms;
+    counter-reset: headings;
+    /* esse elemento realiza a numeração do FAQ */
+
+}
+
+
+
+#faq {
+
+    .titulo-principal {
+        margin: 0px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #212529;
+    }
+
+    .sub-titulo-faq {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #pesquisaFaqContainer {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        margin-bottom: 60px;
+
+        label {
+            position: relative;
+
+            width: 100%;
+            max-width: 740px;
+            height: 100%;
+
+            margin: 0;
+
+            .icone-lupa-pesquisa {
+                position: absolute;
+                top: 50%;
+                left: 4px;
+
+                transform: translateY(-50%);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 38px;
+                height: 38px;
+
+                border-radius: 20px;
+                background-color: #6EA13E;
+                color: #fff;
+
+            }
+
+            input {
+                border: none;
+                border-radius: 50px;
+                padding-left: 50px;
+                height: 46px;
+                background: #ffffff;
+                border: 1px solid #00000033;
+
+                width: 100%;
+
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: #a3c79d;
+                }
+
+                &::placeholder {
+                    color: #414447;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                }
+            }
+
+            #limparCampo {
+                all: unset;
+
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                height: 20px;
+                width: 20px;
+
+                opacity: 0;
+                color: #6C757D;
+
+                cursor: pointer;
+                transition: var(--delay-default);
+            }
+        }
+    }
+
+    .details-perguntas {
+        margin-bottom: 15px;
+
+        border: 1px solid #0000001c;
+        border-radius: 15px;
+        padding: 20px;
+
+        font-size: 1rem;
+        font-weight: 400;
+
+        /* background: #ffffff; */
+
+        &[open] {
+
+            .perguntas .seta {
+                transform: rotate(180deg);
+            }
+        }
+
+        .perguntas {
+            display: unset;
+            color: #4f7059;
+            display: flex;
+            gap: 10px;
+            counter-increment: headings;
+
+            &::before {
+                content: counter(headings)"."
+            }
+
+            .seta {
+                align-self: center;
+                transition: transform 0.5s ease;
+                transform: rotate(0deg);
+                margin-left: auto;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            padding-top: 10px;
+
+            .respostas {
+                font-size: 0.875rem;
+                margin-bottom: 0px;
+            }
+
+            .link-faq {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 0.8rem;
+                color: #4f7059;
+                text-decoration: none;
+
+                padding: 5px 20px;
+                border: 1px solid #4f7059;
+                border-radius: 18px;
+                width: calc(max-content + 10px);
+
+				.icone-link-externo{
+					opacity: 0;
+					margin: 0;
+					transition: var(--delay-default);
+				}
+
+                &:hover .icone-link-externo,
+                &:focus-visible .icone-link-externo,
+                &:focus .icone-link-externo {
+                    margin-left: 10px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+::details-content {
+    transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    overflow: clip;
+}
+
+/* Browser supports interpolate-size */
+@supports (interpolate-size: allow-keywords) {
+    :root {
+        interpolate-size: allow-keywords;
+    }
+
+    [open]::details-content {
+        height: auto;
+    }
+}
+
+/* Fallback for browsers with no interpolate-size support */
+@supports not (interpolate-size: allow-keywords) {
+    [open]::details-content {
+        height: 150px;
+        overflow-y: scroll;
+        /* In case the contents should be taller than 150px */
+    }
+}
+
+/* Animacoes */
+
+/* FIM Animacoes END */
+
+
+
+/* Media query */
+
+@media(max-width: 427px) {
+
+    .botao-faq {
+        margin-top: 5px;
+    }
+}
+
+/* FIM Media query END */

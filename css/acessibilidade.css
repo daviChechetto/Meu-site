@@ -1,0 +1,158 @@
+@import url('contraste.css');
+
+
+/* Custom CSS for the background image */
+
+:root{
+    --altura-aba-acessibilidade: 200px;
+}
+
+
+/* Nova acessibilidade */
+
+
+#acessibilidade{
+    position: fixed;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    height: 200px;
+    width: 100%;
+    max-width: 32px;
+    
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    background: #000000d0;
+    backdrop-filter: blur(40px);
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 999;
+    transition: var(--delay-default);
+
+    &:hover, &.acessibilidade-expandida{
+        height: var(--altura-aba-acessibilidade);
+        max-width: 250px;
+    }
+    .aba-acessibilidade{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 32px;
+        height: 100%;
+    
+        background: #0092DD;
+        color: white;
+    
+        z-index: 2;
+    }
+    ul.opcoes-acessibilidade{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        position: absolute;
+    
+        width: 0px;
+        height: min-content;
+        
+        margin: 0;
+        padding-left: 32px;
+        
+        list-style: none;
+        overflow: hidden;
+
+        li.opcao-acessibilidade {
+            width: 100%;
+            height: min-content;
+    
+            .link-acessibilidade{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+        
+                width: 100%;
+                min-height: 40px;
+    
+                padding-left: 15px;
+                padding-block: 5px;
+        
+                color: white;
+                text-decoration: none;
+                text-wrap-mode: nowrap;
+        
+                transition: var(--delay-default);
+
+                .titulo-acessibilidade{
+                    font-size: 0.8rem;
+                    margin: 0;
+                    color: inherit;
+                }
+                .tecla-atalho{
+                    font-size: 0.7rem;
+                    color: inherit;
+                }
+        
+                &:hover, &:focus{
+                    background: white;
+                    color: black;
+                }
+            }
+        }
+    }
+    &:hover .opcoes-acessibilidade, &.acessibilidade-expandida .opcoes-acessibilidade{
+        width: 100%;
+    }
+}
+
+#modal-acessibilidade{
+    font-size: 16px;
+
+    h3{
+        font-size: 1rem;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    p{
+        text-align: justify;
+    }
+    ul.listText{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1344px) {
+    .img-header {
+        background-size: cover !important;
+    }
+
+}
+@media (max-width: 1230px) {
+    #acessibilidade {
+        opacity: 0.2;
+
+        &:hover, &:focus, &.acessibilidade-expandida {
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 765px) {
+    .botoes-voltar, .botoes-avancar{
+        display: flex;
+        gap: 10px;
+        width: 50%;
+    }
+    .pagination li{
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 10px;
+    }
+}

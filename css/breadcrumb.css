@@ -1,0 +1,47 @@
+#breadcrumb {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border:2px solid #015b1d3b;
+    
+    border-radius: 50px;
+    
+    
+    width: fit-content;
+    min-height: 48px;
+    
+    padding-inline: 10px;
+    margin-bottom: 15px;
+    
+    ol.breadcrumb{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        background-color: unset;
+
+        .breadcrumb-item{
+            text-align: center;
+            color: #2D4133;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            display: inline-block;
+            padding-left: .5rem;
+            color: #2D4133;
+            content: "/";
+        }
+    }
+    
+    a{
+        color: #0e7f00;
+    }
+    
+    /* desabilitar css default bootstrap */
+    .breadcrumb-item+.breadcrumb-item::before { 
+        display: none;
+        padding-right: 0;
+        color: transparent;
+        content: "";
+    }
+}
