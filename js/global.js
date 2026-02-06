@@ -6,7 +6,7 @@ $(window).on('mousemove', (e) => {
 
 
     $("#perseguidor").css({
-        'transform': `translate(${mouseX}px, ${mouseY}px)`
+        'transform': `translate(${mouseX + 20}px, ${mouseY + 20}px)`
     });
 })
 
