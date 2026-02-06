@@ -1,0 +1,38 @@
+
+
+#perseguidor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dfdfdf; /* Uma cor vibrante */
+	border-radius: 50px;
+	pointer-events: none; /* Essencial para não travar o mouse */
+
+    /* transform: translate(50%, 50%); */
+
+	transition:  250ms ease-out; /* Suaviza o movimento */
+
+    &.esconder{
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+    }
+
+    .triangulo{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 10px;
+        height: 8px;
+
+        background-color: inherit;
+
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}

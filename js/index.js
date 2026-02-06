@@ -241,7 +241,7 @@ modais.on('click', function(event){
 botaoFecharModal.on('click', function() {
     fecharModal($(this).closest(modais))
 })
-AbrirModal($("#modalAnuncio"))
+// AbrirModal($("#modalAnuncio"))
 
 /* FIM Anuncios END */
 
