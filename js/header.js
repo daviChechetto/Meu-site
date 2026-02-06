@@ -295,6 +295,10 @@ $(document).ready(() => {
     smoothscroll: true, 
     scrollspeed: 60,
     mousescrollstep: 30, 
+    
+    // cursorfixedheight: 50,
+    emulatetouch: true,
+    grabcursorenabled: false,
   });
 
   // Observa o `body` ou `html`

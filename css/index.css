@@ -460,10 +460,9 @@
     margin-block: 30px;
     border: 1px solid #dfdfdf;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
 
-    min-height: 100px;
     height: min-content;
 
     .icone-titulo {
