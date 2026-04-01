@@ -89,14 +89,14 @@ const exibirServicos = (servicosFiltrados, elementoContainer) => {
     servicosFiltrados.forEach(servico => {
         
         const servicoElement = $(
-            `<article class="card wow fadeInDown">
+            `<li class="card wow fadeInDown">
             ${servico.novo ? '<span class="faixa-novo" title="Este cartão foi recentemente adicionado">Novo</span>' : ''}
             
             <a ${servico.targetBlank ? 'target="_blank"' : ''} href="${servico.href}" title="Clique aqui para acessar ${servico.nome}">
             ${servico.targetBlank ? '<i class="fas fa-external-link-alt icone-link-externo" title="Esse cartão te levará a outra página"></i>' : ''}
             ${servico.iconeHtml ? servico.iconeHtml : '<img class="imagem-icone" src="' + servico.imagem.src + '" alt="Serviço sobre ' + servico.nome + '"/>'}<h3> ${servico.nome} </h3>
             </a>
-            </article>`
+            </li>`
         );
         
         elementoContainer.append(servicoElement);
@@ -117,11 +117,11 @@ const carregarServicos =  (categoria, nomePesquisado) => {
 }
 
 
-const primeiroCarregamentoServicos = async () => {
-    servicos = await buscarServicos();
+const carregarCartoes = async () => {
+    cartoes = await buscarCartoes();
     carregarServicos("DESTAQUES", '');
 }
-primeiroCarregamentoServicos();
+carregarCartoes();
 
 // ------------Pesquisa Servicos Inicio------------
 

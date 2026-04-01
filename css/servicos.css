@@ -81,8 +81,8 @@
         width: 100%;
         padding-top: 90px;
         
-        background-color: white;
-        box-shadow: -20px 0 0px 0px rgb(255, 255, 255), 20px 0px 0px 0px rgb(255, 255, 255), 0px 0px 12px 20px rgb(255, 255, 255);
+        background-color: var(--cor-fundo);
+        box-shadow: -20px 0 0px 0px var(--cor-fundo), 20px 0px 0px 0px var(--cor-fundo), 0px 0px 12px 20px var(--cor-fundo);
         
         
         #pesquisaNomeContainer{
@@ -190,7 +190,7 @@
 
             padding: 10px;
             border-radius: 20px;
-            background-color: #f2f2f2;
+            background-color: var(--cor-contraste);
             
             list-style: none;
             transition: var(--delay-default);    
@@ -256,7 +256,7 @@
 
                     text-align: center;
                     background-color: transparent;
-                    color: #333333;
+                    color: var(--cor-fonte-padrao);
                     text-decoration: none;
                     
                     border: 1px solid transparent;
@@ -306,7 +306,7 @@
                         position: relative;
                         z-index: 9;
 
-                        color: #333333;
+                        color: var(--cor-fonte-padrao);
                     }
                 }
                 .lista-mais-filtros{
@@ -410,7 +410,7 @@
                 
                 box-shadow: 0px 0px 10px -5px #000000b3;
                 border: none;
-                background: #fff;
+                background: #0e0e0e;
                 
                 border-radius: 20px;
                 
@@ -459,7 +459,7 @@
                     height: 100%;
                     padding: 15px 10px;
         
-                    color: #333333;
+                    color: var(--cor-fonte-padrao);
                     font-weight: bold;
                     text-decoration: none;
         

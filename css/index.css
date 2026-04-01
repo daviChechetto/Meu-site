@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
 @import url("servicos.css");
-@import url("fontes.css");
 
 #containerHeader {
 	height: 100vh;
@@ -306,13 +305,13 @@
             gap: 5px;
     
             text-decoration: none;
-            color: #333;
+            color: var(--cor-fonte-padrao);
             border: none;
     
             width: 100%;
             height: 100%;
     
-            background-color: white;
+            background-color: unset;
 
             cursor: pointer;
             transition: var(--delay-default);
@@ -337,7 +336,7 @@
                 width: 100%;
                 aspect-ratio: 1 / 1;
 
-                border: 1px solid #dfdfdf;
+                border: 1px solid var(--cor-contraste);
                 border-radius: 15px;
 
 
@@ -458,7 +457,7 @@
     align-items: center;
 
     margin-block: 30px;
-    border: 1px solid #dfdfdf;
+    border: 1px solid var(--cor-contraste);
     border-radius: 20px;
     padding: 10px;
     overflow: hidden;
@@ -968,6 +967,31 @@
 
 
 
+/* Engine */
+
+#engine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 300px;
+    background-image: url('../img/image-engine.png');
+    background-attachment: fixed;
+    
+
+    &::after{
+        content: 'Código Puro';
+
+        font-size: 5rem;
+        font-family: "Nothing You Could Do", cursive;
+    }
+}
+
+/* Engine */
+
+
+
 /* FAQ */
 
 #faq {
@@ -975,7 +999,7 @@
         display: flex;
         align-items: center;
 
-        border: 1px solid #dfdfdf;
+        border: 1px solid var(--cor-contraste);
         border-radius: 20px;
         padding: 0;
         overflow: hidden;
@@ -1075,7 +1099,7 @@
     background-image: url('../img/background-viva.svg');
     background-repeat: repeat;
 
-    border: 1px solid #dfdfdf;
+    border: 1px solid var(--cor-contraste);
 
     p {
         font-family: 'MuseoModerno', sans-serif;

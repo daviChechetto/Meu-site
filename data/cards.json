@@ -1,0 +1,15 @@
+[
+	{
+		"nome": "Teste",
+		"categoria": [
+			"ALL"
+		],
+		"icone": "",
+		"img": "",
+		"novo": true
+	},
+	{
+		"nome": "Teste 2",
+		"setor": "Desenvolvimento"
+	}
+]

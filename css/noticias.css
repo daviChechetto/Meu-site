@@ -192,7 +192,7 @@
 
 	hr {
 		margin-block: 30px;
-		border-color: #DFDFDF;
+		border-color: var(--cor-contraste);
 	}
 
 	.paginacao-noticias {
